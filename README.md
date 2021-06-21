@@ -1,9 +1,5 @@
 # binBedGraph
-Script to take single bp bedGraph data and bin counts into specified bin sizes across genome.
-
-
-Note, because any bedgrah window overlapping the bins will be added to the sum, you should use unbinned data as your input bedgraph, as bnning already binned data is potentially problematic. Also, think about it before using this script for read coverage bedGraphs produced by STAR.
-
+Script to take single bp bedGraph data and bin counts into specified bin sizes across genome. Note, because any bedgrah window overlapping the bins will be added to the sum, you should use unbinned data as your input bedgraph.
 
 Usage:
 To run the script, provide 4 inputs (space-separated, in order):
