@@ -48,7 +48,7 @@ module load ucsc-tools/363
   awk '{if($1 != ""){print $0}}' $BG | grep -v 'track' > temp_${temp_label}.bedGraph
   
   echo "making binned bedgraph"
-  #Sum input bedgraph counts over bins, removing bins with 0 counts
+  #Sum input bedgraph counts over bins, remove bins with 0 counts
   bedtools map -a temp_${temp_label}_chop.bed -b temp_${temp_label}.bedGraph -c 4 -o sum | awk '{if($5 != "."){OFS="\t";print($1,$2,$3,$5)}}' > ${LABEL}
   
   echo "removing intermediate files"
